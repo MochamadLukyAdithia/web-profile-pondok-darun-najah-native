@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+* {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.font-island {
+  font-family: "Island Moments";
+}
+.container {
+  @apply max-w-[90rem] mx-auto px-20;
+}
