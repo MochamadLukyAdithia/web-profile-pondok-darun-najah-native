@@ -10,3 +10,38 @@
 .container {
   @apply max-w-[90rem] mx-auto px-20;
 }
+
+/* Nav */
+/* Smooth transitions */
+.mobile-menu {
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.mobile-menu.hidden {
+  transform: translateY(-10px);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.mobile-menu.show {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Burger menu animation */
+.burger-line {
+  transition: all 0.3s ease;
+}
+
+.burger-active .burger-line:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.burger-active .burger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-active .burger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}

@@ -12,63 +12,245 @@
       rel="stylesheet"
     />
   </head>
-  <body class="bg-[#F9F9F9] pb-[60rem]">
-    <div class="flex justify-center">
-      <div class="bg-white fixed w-full top-0 z-20">
-        <nav class="flex container items-center justify-between">
-          <div class="flex gap-4 items-center justify-center">
-            <img src="assets/images/LOGO PP DNI.png" alt="" width="80" />
-            <div class="flex flex-col">
-              <p class="font-island">Pondok Pesantren</p>
-              <h1 class="font-black text-xl text-[#1FE926]">
+  <body class="bg-[#F9F9F9] overflow-x-hidden">
+    <header class="bg-white fixed max-w-2xl w-full top-0 z-50 shadow-sm">
+      <div class="md:container mx-auto px-4">
+        <nav
+          class="flex items-center justify-between py-3"
+          role="navigation"
+          aria-label="Main navigation"
+        >
+          <!-- Logo and Brand -->
+          <div class="flex gap-3 items-center">
+            <img
+              src="assets/images/LOGO PP DNI.png"
+              alt="Logo Pondok Pesantren Darun Najah Al-'Irfany"
+              width="80"
+              height="80"
+              class="flex-shrink-0"
+            />
+            <div class="flex flex-col min-w-0">
+              <p class="font-island text-sm sm:text-base">Pondok Pesantren</p>
+              <h1
+                class="font-black text-sm md:text-xl text-[#1FE926] leading-tight"
+              >
                 DARUN NAJAH AL-'IRFANY
               </h1>
-              <h1>Jember - Jawa Timur</h1>
+              <p class="text-xs sm:text-sm text-gray-600">
+                Jember - Jawa Timur
+              </p>
             </div>
           </div>
-          <ul class="flex items-center justify-center gap-6">
-            <li>
-              <a href="" class="bg-[#25A244] px-4 py-2 text-white rounded-full"
-                >Beranda</a
+
+          <!-- Desktop Navigation Menu -->
+          <ul class="hidden lg:flex items-center gap-6" role="menubar">
+            <li role="none">
+              <a
+                href="#"
+                role="menuitem"
+                class="bg-[#25A244] px-4 py-2 text-white rounded-full hover:bg-[#1e8538] transition-colors focus:outline-none focus:ring-2 focus:ring-[#25A244] focus:ring-offset-2"
+                aria-current="page"
               >
+                Beranda
+              </a>
             </li>
-            <li><a href="">Profil</a></li>
-            <li><a href="">Pendidikan</a></li>
-            <li><a href="">Berita</a></li>
-            <li><a href="">PPDB</a></li>
-            <li><a href="">Kontak Kami</a></li>
+            <li role="none">
+              <a
+                href="#"
+                role="menuitem"
+                class="text-gray-700 hover:text-[#25A244] transition-colors focus:outline-none focus:ring-2 focus:ring-[#25A244] focus:ring-offset-2 px-2 py-1 rounded"
+              >
+                Profil
+              </a>
+            </li>
+            <li role="none">
+              <a
+                href="#"
+                role="menuitem"
+                class="text-gray-700 hover:text-[#25A244] transition-colors focus:outline-none focus:ring-2 focus:ring-[#25A244] focus:ring-offset-2 px-2 py-1 rounded"
+              >
+                Pendidikan
+              </a>
+            </li>
+            <li role="none">
+              <a
+                href="#"
+                role="menuitem"
+                class="text-gray-700 hover:text-[#25A244] transition-colors focus:outline-none focus:ring-2 focus:ring-[#25A244] focus:ring-offset-2 px-2 py-1 rounded"
+              >
+                Berita
+              </a>
+            </li>
+            <li role="none">
+              <a
+                href="#"
+                role="menuitem"
+                class="text-gray-700 hover:text-[#25A244] transition-colors focus:outline-none focus:ring-2 focus:ring-[#25A244] focus:ring-offset-2 px-2 py-1 rounded"
+              >
+                PPDB
+              </a>
+            </li>
+            <li role="none">
+              <a
+                href="#"
+                role="menuitem"
+                class="text-gray-700 hover:text-[#25A244] transition-colors focus:outline-none focus:ring-2 focus:ring-[#25A244] focus:ring-offset-2 px-2 py-1 rounded"
+              >
+                Kontak Kami
+              </a>
+            </li>
           </ul>
+
+          <!-- Desktop Search -->
+          <div class="hidden md:flex">
+            <div
+              class="flex items-center gap-3 border-2 border-[#25A244] pl-4 pr-6 py-2 rounded-full"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="text-[#25A244]"
+                viewBox="0 0 16 16"
+                aria-hidden="true"
+              >
+                <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                />
+              </svg>
+              <input
+                type="search"
+                placeholder="Pencarian"
+                class="text-black/70 placeholder-black/30 bg-transparent border-none outline-none text-sm w-24"
+                aria-label="Pencarian situs"
+              />
+            </div>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button
+            type="button"
+            class="lg:hidden flex flex-col justify-center items-center w-8 h-8 p-1 focus:outline-none focus:ring-2 focus:ring-[#25A244] focus:ring-offset-2 rounded burger-menu"
+            aria-label="Toggle mobile menu"
+            aria-expanded="false"
+            onclick="toggleMobileMenu()"
+          >
+            <span class="burger-line w-6 h-0.5 bg-gray-600 block"></span>
+            <span class="burger-line w-6 h-0.5 bg-gray-600 block mt-1"></span>
+            <span class="burger-line w-6 h-0.5 bg-gray-600 block mt-1"></span>
+          </button>
+        </nav>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        class="lg:hidden mobile-menu hidden bg-white border-t border-gray-200"
+        id="mobileMenu"
+      >
+        <div class="container mx-auto px-4 py-4">
+          <!-- Mobile Navigation -->
+          <ul class="space-y-3 mb-4" role="menu">
+            <li role="none">
+              <a
+                href="#"
+                role="menuitem"
+                class="block bg-[#25A244] px-4 py-3 text-white rounded-lg hover:bg-[#1e8538] transition-colors focus:outline-none focus:ring-2 focus:ring-[#25A244] focus:ring-offset-2"
+                aria-current="page"
+              >
+                Beranda
+              </a>
+            </li>
+            <li role="none">
+              <a
+                href="#"
+                role="menuitem"
+                class="block text-gray-700 hover:text-[#25A244] hover:bg-gray-50 px-4 py-3 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-[#25A244] focus:ring-offset-2"
+              >
+                Profil
+              </a>
+            </li>
+            <li role="none">
+              <a
+                href="#"
+                role="menuitem"
+                class="block text-gray-700 hover:text-[#25A244] hover:bg-gray-50 px-4 py-3 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-[#25A244] focus:ring-offset-2"
+              >
+                Pendidikan
+              </a>
+            </li>
+            <li role="none">
+              <a
+                href="#"
+                role="menuitem"
+                class="block text-gray-700 hover:text-[#25A244] hover:bg-gray-50 px-4 py-3 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-[#25A244] focus:ring-offset-2"
+              >
+                Berita
+              </a>
+            </li>
+            <li role="none">
+              <a
+                href="#"
+                role="menuitem"
+                class="block text-gray-700 hover:text-[#25A244] hover:bg-gray-50 px-4 py-3 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-[#25A244] focus:ring-offset-2"
+              >
+                PPDB
+              </a>
+            </li>
+            <li role="none">
+              <a
+                href="#"
+                role="menuitem"
+                class="block text-gray-700 hover:text-[#25A244] hover:bg-gray-50 px-4 py-3 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-[#25A244] focus:ring-offset-2"
+              >
+                Kontak Kami
+              </a>
+            </li>
+          </ul>
+
+          <!-- Mobile Search -->
           <div
-            class="flex gap-4 border-[2px] border-[#25A244] pl-4 pr-20 py-2 items-center rounded-full"
+            class="flex items-center gap-3 border-2 border-[#25A244] pl-4 pr-6 py-3 rounded-full"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
               height="16"
               fill="currentColor"
-              class="bi bi-search"
+              class="text-[#25A244]"
               viewBox="0 0 16 16"
+              aria-hidden="true"
             >
               <path
                 d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
               />
             </svg>
-            <p class="text-black/30">Pencarian</p>
+            <input
+              type="search"
+              placeholder="Pencarian"
+              class="text-black/70 placeholder-black/30 bg-transparent border-none outline-none text-sm flex-1"
+              aria-label="Pencarian situs"
+            />
           </div>
-        </nav>
+        </div>
       </div>
-    </div>
-    <div class="absolute right-80 -top-10 -z-10">
+    </header>
+
+    <div class="absolute flex justify-center w-full ml-20 -top-10 -z-10">
       <img src="assets/images/Elips.svg" alt="" />
     </div>
     <div class="relative pt-32">
       <div
-        class="absolute -bottom-0 bg-[#FEC00F] w-20 h-20 -left-10 rounded-full"
+        class="absolute -bottom-0 bg-[#FEC00F] w-20 h-20 -left-14 rounded-full"
       ></div>
       <section id="hero" class="mx-auto relative max-w-7xl px-10 py-10">
-        <div class="flex justify-between items-center">
+        <div
+          class="flex flex-col-reverse md:flex-row justify-between items-center"
+        >
           <div class="flex flex-col gap-[20px]">
-            <h1 class="font-semibold">Selamat Datang di Website Resmi</h1>
+            <h1 class="font-semibold pt-10 md:pt-0">
+              Selamat Datang di Website Resmi
+            </h1>
             <h1 class="text-3xl font-black">
               Pondok Pesantran <br />
               Darun Najah Al-’Irfany Jember
@@ -90,7 +272,9 @@
     </div>
 
     <section id="promo" class="bg-[#CDF7CB] w-full py-14 mt-10">
-      <div class="flex items-center gap-12 justify-center mx-auto">
+      <div
+        class="flex flex-col md:flex-row items-start px-10 md:px-0 md:items-center gap-12 justify-center mx-auto"
+      >
         <div class="flex items-center gap-4">
           <div class="bg-[#FEC00FC7] rounded-full w-fit p-4">
             <img src="assets/icons/institusi.svg" width="25" alt="" />
@@ -139,7 +323,9 @@
       </div>
     </section>
     <section id="mengenal" class="container mt-20">
-      <div class="flex items-center gap-20 relative justify-between">
+      <div
+        class="flex flex-col md:flex-row items-center gap-20 relative justify-between"
+      >
         <div class="flex flex-col gap-6">
           <div
             class="bg-[#1FE9264A]/60 w-16 h-16 -left-6 -mt-4 absolute -z-10 rounded-full"
@@ -167,17 +353,342 @@
         </div>
       </div>
     </section>
-    <section class="bg-[#32E25D1F]/40 mt-20 relative w-full h-fit pb-10">
-      <div class="bg-[#FEC00F] w-20 h-20 rounded-full absolute bottom-0 -left-10"></div>
-      <div class="bg-[#FEC00F] w-20 h-20 rounded-full absolute bottom-0 -right-10"></div>
+    <section class="bg-[#32E25D1F]/40 mt-20 relative w-full h-fit pb-20">
+      <div
+        class="bg-[#FEC00F] w-20 h-20 rounded-full absolute bottom-0 -left-10"
+      ></div>
+      <div
+        class="bg-[#FEC00F] w-20 h-20 rounded-full absolute bottom-0 -right-10"
+      ></div>
       <div class="flex justify-center">
         <img src="assets/icons/Elips.svg" alt="" class="absolute -z-10" />
         <div class="mt-20 flex flex-col gap-10 items-center">
           <h1 class="font-semibold text-xl">Pendaftaran PPDB</h1>
-          <h1 class="font-bold text-3xl text-center">Informasi Seputar Penerimaan Santri Baru <br> Tahun 2025 - 2026</h1>
-          <a href="" class="bg-[#08CB00] px-20 text-md text-white py-4 rounded-md">Klik Disini</a>
+          <h1 class="font-bold text-3xl text-center">
+            Informasi Seputar Penerimaan Santri Baru <br />
+            Tahun 2025 - 2026
+          </h1>
+          <a
+            href=""
+            class="bg-[#08CB00] px-20 text-md text-white py-4 rounded-md"
+            >Klik Disini</a
+          >
         </div>
       </div>
     </section>
+    <section id="pengasuh" class="mt-20 container">
+      <div class="text-center flex flex-col gap-2 items-center justify-center">
+        <h1 class="text-xl font-bold">Dewan Pengasuh</h1>
+        <p class="text-[#696984]">Jajaran Dewan Pengasuh Pondok</p>
+      </div>
+      <div
+        class="mt-10 flex flex-col md:flex-row gap-10 items-center justify-between"
+      >
+        <div class="flex flex-col gap-2 items-center">
+          <img src="assets/images/pengasuh.png" alt="" />
+          <p><b>RK. Moch. Qudsy Arafat M.</b></p>
+          <p>Pengasuh Pondok Pesantren</p>
+        </div>
+        <div class="flex flex-col gap-2 items-center">
+          <img src="assets/images/pengasuh.png" alt="" />
+          <p><b>RK. Moch. Qudsy Arafat M.</b></p>
+          <p>Pengasuh Pondok Pesantren</p>
+        </div>
+        <div class="flex flex-col gap-2 items-center">
+          <img src="assets/images/pengasuh.png" alt="" />
+          <p><b>RK. Moch. Qudsy Arafat M.</b></p>
+          <p>Pengasuh Pondok Pesantren</p>
+        </div>
+        <div class="flex flex-col gap-2 items-center">
+          <img src="assets/images/pengasuh.png" alt="" />
+          <p><b>RK. Moch. Qudsy Arafat M.</b></p>
+          <p>Pengasuh Pondok Pesantren</p>
+        </div>
+      </div>
+    </section>
+    <section id="berita" class="bg-[#32E25D1F] w-full h-fit pb-10 mt-14">
+      <div class="flex flex-col gap-2 items-center justify-center pt-10">
+        <h1 class="text-[#2F327D] text-2xl font-bold">
+          Berita Terbaru Pesantren
+        </h1>
+        <p class="text-[#696984] text-center">
+          Temukan informasi terbaru seputar kegiatan, prestasi, dan aktivitas di
+          MA Darun Najah.
+        </p>
+      </div>
+      <div class="mt-10 container">
+        <div class="grid md:grid-cols-2 gap-10">
+          <div class="flex flex-col gap-4">
+            <img src="assets/images/news.png" alt="NEWS" />
+            <p
+              class="bg-[#F4C467] px-4 py-2 rounded-full text-[#252641] w-fit font-bold text-xs"
+            >
+              NEWS
+            </p>
+            <p class="text-[#696984]">
+              Keluarga besar MA Darun Najah melaksanakan khataman Al-Qur’an
+              bersama sebagai penutup kegiatan semester.
+            </p>
+            <a href="" class="text-[#696984]"><u>Baca Selengkapnya</u></a>
+          </div>
+          <div class="flex flex-col justify-between gap-10">
+            <div class="flex flex-col md:flex-row justify-between gap-4">
+              <div class="relative">
+                <img
+                  src="assets/images/news.png"
+                  alt=""
+                  class="md:w-52 md:h-32"
+                />
+                <div class="absolute right-2 top-22">
+                  <p
+                    class="bg-[#F4C467] px-4 py-2 rounded-full text-[#252641] w-fit font-bold text-xs"
+                  >
+                    PERS RELEASE
+                  </p>
+                </div>
+              </div>
+              <div class="flex flex-col md:flex-row gap-6 w-96">
+                <p>
+                  Peringatan Hari Santri Nasional di MA Darun Najah Berlangsung
+                  Meriah
+                </p>
+                <p class="text-[#696984] text-sm">
+                  Dalam rangka Hari Santri Nasional, MA Darun Najah menggelar
+                  upacara, lomba keagamaan, serta pentas seni Islami.
+                </p>
+              </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between gap-4">
+              <div class="relative">
+                <img
+                  src="assets/images/news.png"
+                  alt=""
+                  class="md:w-52 md:h-32"
+                />
+                <div class="absolute right-2 top-22">
+                  <p
+                    class="bg-[#F4C467] px-4 py-2 rounded-full text-[#252641] w-fit font-bold text-xs"
+                  >
+                    PERS RELEASE
+                  </p>
+                </div>
+              </div>
+              <div class="flex flex-col md:flex-row gap-6 w-96">
+                <p>
+                  Peringatan Hari Santri Nasional di MA Darun Najah Berlangsung
+                  Meriah
+                </p>
+                <p class="text-[#696984] text-sm">
+                  Dalam rangka Hari Santri Nasional, MA Darun Najah menggelar
+                  upacara, lomba keagamaan, serta pentas seni Islami.
+                </p>
+              </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between gap-4">
+              <div class="relative">
+                <img
+                  src="assets/images/news.png"
+                  alt=""
+                  class="md:w-52 md:h-32"
+                />
+                <div class="absolute right-2 top-22">
+                  <p
+                    class="bg-[#F4C467] px-4 py-2 rounded-full text-[#252641] w-fit font-bold text-xs"
+                  >
+                    PERS RELEASE
+                  </p>
+                </div>
+              </div>
+              <div class="flex flex-col md:flex-row gap-6 w-96">
+                <p>
+                  Peringatan Hari Santri Nasional di MA Darun Najah Berlangsung
+                  Meriah
+                </p>
+                <p class="text-[#696984] text-sm">
+                  Dalam rangka Hari Santri Nasional, MA Darun Najah menggelar
+                  upacara, lomba keagamaan, serta pentas seni Islami.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="pendidikan" class="mt-20 container">
+      <div class="grid grid-cols-2 justify-between">
+        <div class="flex flex-col gap-4">
+          <p class="text-[#C70000]">LEMBAGA PENDIDIKAN</p>
+          <p class="font-bold text-2xl">Formal & Non Formal</p>
+          <p class="text-[#696984]">
+            Lembaga Pendidikan yang ada di bawah naungan Pondok Pesantren Darun
+            Najah Al-’Irfany Jember
+          </p>
+        </div>
+        <div class="grid-cols-3 grid gap-x-20 gap-y-4 justify-between">
+          <img src="assets/images/amazon.png" alt="" />
+          <img src="assets/images/amazon.png" alt="" />
+          <img src="assets/images/amazon.png" alt="" />
+          <img src="assets/images/amazon.png" alt="" />
+          <img src="assets/images/amazon.png" alt="" />
+          <img src="assets/images/amazon.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <footer class="bg-[#F0F0F0] text-[#1B1D21] py-16 mt-20">
+      <div class="container mx-auto px-10">
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+          <div class="lg:col-span-1">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="flex gap-4 items-center justify-center">
+                <img src="assets/images/LOGO PP DNI.png" alt="" width="80" />
+                <div class="flex flex-col">
+                  <p class="font-island">Pondok Pesantren</p>
+                  <h1 class="font-black text-xm text-[#1FE926]">
+                    DARUN NAJAH AL-'IRFANY
+                  </h1>
+                  <h1 class="text-sm">Jember - Jawa Timur</h1>
+                </div>
+              </div>
+            </div>
+            <div class="text-sm text-[#1B1D21] space-y-1">
+              <div class="flex items-center gap-2">
+                <img src="assets/icons/map.svg" alt="" />
+                <p>Jalan Dr. Soebandi Gg. Kurma No. 01 Ling. Patrang Tengah</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <img src="assets/icons/call.svg" alt="" />
+                <p>+62 898765567882</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <img src="assets/icons/mail.svg" alt="" />
+                <p>darunnajah@mail.ac.id</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-lg mb-4">Navigasi</h3>
+            <ul class="space-y-2 text-[#1B1D21]">
+              <li><a href="#" class="hover:text-green-400">Beranda</a></li>
+              <li><a href="#" class="hover:text-green-400">Profil</a></li>
+              <li><a href="#" class="hover:text-green-400">Pendidikan</a></li>
+              <li><a href="#" class="hover:text-green-400">Berita</a></li>
+              <li><a href="#" class="hover:text-green-400">PPDB</a></li>
+              <li><a href="#" class="hover:text-green-400">Kontak Kami</a></li>
+            </ul>
+          </div>
+
+=          <div>
+            <h3 class="font-bold text-lg mb-4">Information</h3>
+            <ul class="space-y-2 text-[#1B1D21]">
+              <li><a href="#" class="hover:text-green-400">FAQ</a></li>
+              <li><a href="#" class="hover:text-green-400">Blog</a></li>
+              <li><a href="#" class="hover:text-green-400">Support</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-lg mb-4">Company</h3>
+            <ul class="space-y-2 text-[#1B1D21]">
+              <li><a href="#" class="hover:text-green-400">About Us</a></li>
+              <li><a href="#" class="hover:text-green-400">Careers</a></li>
+              <li><a href="#" class="hover:text-green-400">Contact Us</a></li>
+              <li><a href="#" class="hover:text-green-400">Lift Media</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-lg mb-4">Send Message</h3>
+            <div class="flex gap-2">
+              <input
+                type="text"
+                placeholder="Tulis Pesan Disini"
+                class="flex-1 px-3 py-2 bg-white text-gray-400 rounded border border-gray-600 focus:border-green-400 focus:outline-none text-sm"
+              />
+              <button
+                class="bg-yellow-500 text-black px-4 py-2 rounded hover:bg-yellow-400"
+              >
+                ➤
+              </button>
+            </div>
+            <div class="flex gap-3 mt-4">
+              <div
+                class="w-8 h-8 bg-gray-600 text-white rounded-full flex items-center justify-center hover:bg-gray-500 cursor-pointer"
+              >
+                <span class="text-xs">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-facebook"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"
+                    />
+                  </svg>
+                </span>
+              </div>
+              <div
+                class="w-8 h-8 bg-gray-600 text-white rounded-full flex items-center justify-center hover:bg-gray-500 cursor-pointer"
+              >
+                <span class="text-xs"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-instagram"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+                    />
+                  </svg>
+                </span>
+              </div>
+              <div
+                class="w-8 h-8 bg-gray-600 text-white rounded-full flex items-center justify-center hover:bg-gray-500 cursor-pointer"
+              >
+                <span class="text-xs"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-youtube"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"
+                    />
+                  </svg>
+                </span>
+              </div>
+              <div
+                class="w-8 h-8 bg-gray-600 text-white rounded-full flex items-center justify-center hover:bg-gray-500 cursor-pointer"
+              >
+                <span class="text-xs"
+                  ><img src="assets/icons/shopee.png" alt=""
+                /></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-700 mt-12 pt-8 text-sm text-gray-400">
+          <div class="max-w-2xl flex justify-between items-center mx-auto">
+            <p>© 2025 All Rights Reserved</p>
+            <div class="flex gap-6">
+              <a href="#" class="hover:text-green-400">Terms</a>
+              <a href="#" class="hover:text-green-400">Privacy</a>
+              <a href="#" class="hover:text-green-400">Cookies</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>
