@@ -269,19 +269,7 @@
           />
 
           <style>
-            @keyframes float {
-              0%,
-              100% {
-                transform: translateY(0);
-              }
-              50% {
-                transform: translateY(-15px); /* naik 15px */
-              }
-            }
-
-            .animate-float {
-              animation: float 4s ease-in-out infinite;
-            }
+           
           </style>
         </div>
       </section>
@@ -366,11 +354,9 @@
             class="bg-[#08CB0033]/70 w-40 h-40 rounded-2xl -ml-4 -bottom-4 -right-4 -z-10 -mt-4 absolute"
           ></div>
 
-          <!-- Embed YouTube -->
           <iframe
-            width="560"
-            height="315"
-            class="rounded-xl shadow-lg"
+            
+            class="rounded-xl shadow-lg w-full md:w-[560px] md:h-[315px]"
             src="https://www.youtube.com/embed/z8WN3OE1aPc"
             title="YouTube video player"
             frameborder="0"
@@ -432,7 +418,7 @@
         <h1 class="text-xl font-bold">Dewan Pengasuh</h1>
         <p class="text-[#696984]">Jajaran Dewan Pengasuh Pondok</p>
       </div>
-      <div class="mt-10 grid grid-cols-5 gap-10 items-start justify-between">
+      <div class="mt-10 grid grid-cols-1 md:grid-cols-5 gap-10 items-start justify-between">
         <div class="flex text-center flex-col gap-2 items-center">
           <img
             src="assets/images/pengasuh.png"
@@ -598,7 +584,7 @@
       </div>
     </section>
     <section id="pendidikan" class="mt-20 container">
-      <div class="grid grid-cols-1 gap-40 md:grid-cols-2 justify-between">
+      <div class="grid grid-cols-1 gap-20 md:gap-40 md:grid-cols-2 justify-between">
         <div class="flex flex-col gap-4">
           <p class="text-[#C70000]">LEMBAGA PENDIDIKAN</p>
           <p class="font-bold text-2xl">Formal & Non Formal</p>

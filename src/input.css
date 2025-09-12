@@ -8,7 +8,21 @@
   font-family: "Island Moments";
 }
 .container {
-  @apply  md:max-w-[90rem] mx-auto px-20;
+  @apply md:max-w-[90rem] mx-auto px-20;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px); /* naik 15px */
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
 }
 
 /* Nav */
