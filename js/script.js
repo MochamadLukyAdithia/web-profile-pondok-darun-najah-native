@@ -76,3 +76,5 @@ modal.addEventListener("click", (e) => {
     closeModalFunc();
   }
 });
+
+// Swiper

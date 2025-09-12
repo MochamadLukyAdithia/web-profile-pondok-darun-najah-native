@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Island+Moments&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
   <body class="bg-[#F9F9F9] overflow-x-hidden">
     <header class="bg-white fixed top-0 w-full z-50 shadow-sm">
@@ -268,9 +269,7 @@
             alt="Hero"
           />
 
-          <style>
-           
-          </style>
+          <style></style>
         </div>
       </section>
     </div>
@@ -355,7 +354,6 @@
           ></div>
 
           <iframe
-            
             class="rounded-xl shadow-lg w-full md:w-[560px] md:h-[315px]"
             src="https://www.youtube.com/embed/z8WN3OE1aPc"
             title="YouTube video player"
@@ -414,57 +412,73 @@
     </div>
 
     <section id="pengasuh" class="mt-20 container">
-      <div class="text-center flex flex-col gap-2 items-center justify-center">
-        <h1 class="text-xl font-bold">Dewan Pengasuh</h1>
-        <p class="text-[#696984]">Jajaran Dewan Pengasuh Pondok</p>
-      </div>
-      <div class="mt-10 grid grid-cols-1 md:grid-cols-5 gap-10 items-start justify-between">
-        <div class="flex text-center flex-col gap-2 items-center">
-          <img
-            src="assets/images/pengasuh.png"
-            class="rounded-md w-52 h-72 object-cover"
-            alt=""
-          />
-          <p><b>RK. Moch. Qudsy Arafat M.</b></p>
-          <p>Pengasuh Pondok Pesantren</p>
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      />
+
+      <section class="mt-10">
+        <h2 class="text-center text-2xl font-bold mb-4">Dewan Pengasuh</h2>
+        <p class="text-center text-gray-500 mb-8">
+          Jajaran Dewan Pengasuh Pondok
+        </p>
+
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide flex flex-col gap-2 items-center">
+              <img
+                src="assets/images/pengasuh.png"
+                class="rounded-md w-52 h-72 object-cover"
+                alt=""
+              />
+              <p><b>RK. Moch. Qudsy Arafat M.</b></p>
+              <p>Pengasuh Pondok Pesantren</p>
+            </div>
+
+            <div class="swiper-slide flex flex-col gap-2 items-center">
+              <img
+                class="rounded-md w-52 h-72 object-cover"
+                src="assets/images/ust.JPG"
+                alt=""
+              />
+              <p><b>Gus M. Erfan Muktasim Billlah., S.H.I., M.H.I</b></p>
+              <p>Ketua Yayasan Pondok Pesantren Darun Najah</p>
+            </div>
+
+            <div class="swiper-slide flex flex-col gap-2 items-center">
+              <img
+                class="rounded-md w-52 h-72 object-cover"
+                src="assets/images/pengasuh-3.jpg"
+                alt=""
+              />
+              <p><b>Ahmad Ghozali., M.H.I</b></p>
+              <p>Sekretaris Yayasan</p>
+            </div>
+
+            <div class="swiper-slide flex flex-col gap-2 items-center">
+              <img
+                src="assets/images/pengasuh-4.jpg"
+                class="rounded-md w-52 h-72 object-cover"
+                alt=""
+              />
+              <p><b>RK. Moch. Qudsy Arafat M.</b></p>
+              <p>Pengasuh Pondok Pesantren</p>
+            </div>
+
+            <div class="swiper-slide flex flex-col gap-2 items-center">
+              <img
+                src="assets/images/pengasuh-5.jpg"
+                class="rounded-md w-52 h-72 object-cover"
+                alt=""
+              />
+              <p><b>RK. Moch. Qudsy Arafat M.</b></p>
+              <p>Pengasuh Pondok Pesantren</p>
+            </div>
+          </div>
+
+          <div class="swiper-pagination"></div>
         </div>
-        <div class="flex flex-col gap-2 text-center items-center">
-          <img
-            class="rounded-md w-52 h-72 object-cover"
-            src="assets/images/ust.JPG"
-            alt=""
-          />
-          <p><b>Gus M. Erfan Muktasim Billlah., S.H.I., M.H.I</b></p>
-          <p>Ketua Yayasan Pondok Pesantren Darun Najah</p>
-        </div>
-        <div class="flex flex-col gap-2 items-center">
-          <img
-            class="rounded-md w-52 h-72 object-cover"
-            src="assets/images/pengasuh-3.jpg"
-            alt=""
-          />
-          <p><b>Ahmad Ghozali., M.H.I</b></p>
-          <p>Sekretaris Yayasan</p>
-        </div>
-        <div class="flex flex-col gap-2 items-center">
-          <img
-            src="assets/images/pengasuh-4.jpg"
-            class="rounded-md w-52 h-72 object-cover"
-            alt=""
-          />
-          <p><b>RK. Moch. Qudsy Arafat M.</b></p>
-          <p>Pengasuh Pondok Pesantren</p>
-        </div>
-        <div class="flex flex-col gap-2 items-center">
-          <img
-            src="assets/images/pengasuh-5.jpg"
-            class="rounded-md w-52 h-72 object-cover"
-            alt=""
-          />
-          <p><b>RK. Moch. Qudsy Arafat M.</b></p>
-          <p>Pengasuh Pondok Pesantren</p>
-        </div>
-      </div>
+      </section>
     </section>
     <section id="berita" class="bg-[#32E25D1F] w-full h-fit pb-10 mt-14">
       <div class="flex flex-col gap-2 items-center justify-center pt-10">
@@ -584,7 +598,9 @@
       </div>
     </section>
     <section id="pendidikan" class="mt-20 container">
-      <div class="grid grid-cols-1 gap-20 md:gap-40 md:grid-cols-2 justify-between">
+      <div
+        class="grid grid-cols-1 gap-20 md:gap-40 md:grid-cols-2 justify-between"
+      >
         <div class="flex flex-col gap-4">
           <p class="text-[#C70000]">LEMBAGA PENDIDIKAN</p>
           <p class="font-bold text-2xl">Formal & Non Formal</p>
@@ -765,5 +781,31 @@
       </div>
     </footer>
     <script src="js/script.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 4.5,
+        spaceBetween: 20,
+        loop: false,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1.2,
+          },
+          768: {
+            slidesPerView: 2.5,
+          },
+          1024: {
+            slidesPerView: 4.5,
+          },
+        },
+      });
+    </script>
   </body>
 </html>
