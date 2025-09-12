@@ -8,11 +8,10 @@
   font-family: "Island Moments";
 }
 .container {
-  @apply max-w-[90rem] mx-auto px-20;
+  @apply  md:max-w-[90rem] mx-auto px-20;
 }
 
 /* Nav */
-/* Smooth transitions */
 .mobile-menu {
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
@@ -29,7 +28,6 @@
   pointer-events: auto;
 }
 
-/* Burger menu animation */
 .burger-line {
   transition: all 0.3s ease;
 }
